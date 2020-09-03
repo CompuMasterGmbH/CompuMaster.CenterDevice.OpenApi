@@ -4,8 +4,8 @@
     {
         string Id { get; }
         string Name { get; }
-        bool Shared { get; }
-        bool HasFolders { get; }
+        bool IsShared { get; }
+        bool? HasFolders { get; }
         bool Archived { get; }
     }
 }
