@@ -33,8 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="RestSharp, Version=106.11.2.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
-      <HintPath>..\packages\RestSharp.106.11.2\lib\net452\RestSharp.dll</HintPath>
+    <Reference Include="RestSharp, Version=106.11.4.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.106.11.4\lib\net452\RestSharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -55,14 +55,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\GitHub-OpenSource\CompuMaster.Scopevisio.OpenApi\src\CompuMaster.Scopevisio.OpenApi\CompuMaster.Scopevisio.OpenApi.csproj">
-      <Project>{87401c65-da22-45d5-a4e5-697f23c9e4a7}</Project>
-      <Name>CompuMaster.Scopevisio.OpenApi</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\CenterDevice.IO\CompuMaster.Scopevisio.Teamwork.csproj">
-      <Project>{1878f1a6-b870-4ad4-ac7a-62430667740f}</Project>
-      <Name>CompuMaster.Scopevisio.Teamwork</Name>
-    </ProjectReference>
     <ProjectReference Include="..\CenterDevice.Model\CenterDevice.Model.csproj">
       <Project>{c16f46d8-461b-4fe3-b8d6-26b3dbe6fa6c}</Project>
       <Name>CenterDevice.Model</Name>

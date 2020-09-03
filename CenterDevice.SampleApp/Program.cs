@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Text;
 using System.Threading.Tasks;
-using CompuMaster.Scopevisio.OpenApi;
-using CompuMaster.Scopevisio.OpenApi.Client;
+using CenterDevice.IO;
 
 namespace CenterDevice.SampleApp
 {
@@ -15,23 +14,22 @@ namespace CenterDevice.SampleApp
             string customerno = InputLine("customer no.");
             string password = InputLine("password");
 
-            OpenScopeApiClient OpenScopeClient = new OpenScopeApiClient();
             try
             {
                 //Authorize initially with user credentials -> recieved access token will be saved for following requests
-                OpenScopeClient.AuthorizeWithUserCredentials(username, customerno, password);
-                System.Console.WriteLine("Authorization successful, future requests can be executed with access token:\n" + OpenScopeClient.Token.AccessToken);
-                System.Console.WriteLine();
+                //TODO: somethine like CenterDeviceClient.AuthorizeWithUserCredentials(username, customerno, password);
+                //System.Console.WriteLine("Authorization successful, future requests can be executed with access token:\n" + CenterDeviceClient.Token.AccessToken);
+                //System.Console.WriteLine();
 
-                //Show information on current context
-                ShowContextInfo(OpenScopeClient);
-
-                //Create teamwork rest client
-                //CompuMaster.Scopevisio.CenterDeviceApi.TeamworkRestClient TeamworkRestClient = new CompuMaster.Scopevisio.CenterDeviceApi.TeamworkRestClient(OpenScopeClient);
-
-                //Create IO client for CenterDevice or Scopevisio Teamwork 
-                //CenterDevice.IO.CenterDeviceIOClient IOClient = new CenterDevice.IO.CenterDeviceIOClient(new CenterDevice.Rest.Clients.CenterDeviceClient(oAuthInfoProvider, configuration, errorHandler), userID);  //TODO: provide arguments as usual for CenterDevice REST client
-                CompuMaster.Scopevisio.Teamwork.TeamworkIOClient IOClient = new CompuMaster.Scopevisio.Teamwork.TeamworkIOClient(OpenScopeClient);
+                //Create IO client for CenterDevice 
+                CenterDevice.IO.CenterDeviceIOClient IOClient = null;
+                /* TODO:something like
+                CenterDevice.IO.CenterDeviceIOClient IOClient = new CenterDevice.IO.CenterDeviceIOClient(
+                    new CenterDevice.Rest.Clients.CenterDeviceClient(
+                        oAuthInfoProvider, configuration, errorHandler
+                        ), 
+                    userID);  //TODO: provide arguments as usual for CenterDevice REST client
+                */
 
                 //Show available directory structure
                 if (false)
@@ -233,12 +231,12 @@ namespace CenterDevice.SampleApp
                         System.Console.WriteLine(Indent("File doesn't exist: " + TransferTestFileName));
                 }
             }
-            catch (ApiException e)
-            {
-                System.Console.WriteLine("Exception when calling API: " + e.Message);
-                System.Console.WriteLine("Status Code: " + e.ErrorCode);
-                System.Console.WriteLine(e.StackTrace);
-            }
+            //catch (ApiException e)
+            //{
+            //    System.Console.WriteLine("Exception when calling API: " + e.Message);
+            //    System.Console.WriteLine("Status Code: " + e.ErrorCode);
+            //    System.Console.WriteLine(e.StackTrace);
+            //}
 #pragma warning disable CA1031 // Do not catch general exception types
             catch (Exception e)
             {
@@ -248,55 +246,6 @@ namespace CenterDevice.SampleApp
         }
 
 
-
-        /// <summary>
-        /// Show information on current context
-        /// </summary>
-        /// <param name="OpenScopeClient"></param>
-        static void ShowContextInfo(OpenScopeApiClient OpenScopeClient)
-        {
-            //A 1st API method call for getting API version info (authorized by access token from initial request)
-            CompuMaster.Scopevisio.OpenApi.Model.Version VersionResult = OpenScopeClient.AdditionalApi.GetVersionWithHttpInfo().Data;
-            System.Console.WriteLine("Interface version=" + VersionResult.ToString());
-            System.Console.WriteLine();
-
-            ////A 2nd API method call for getting HelloWorld data (authorized by access token from initial request)
-            //CompuMaster.Scopevisio.OpenApi.Model.Hello HelloResult = OpenScopeClient.AdditionalApi.HelloJsonWithHttpInfo().Data;
-            //System.Console.WriteLine("Hello world=" + HelloResult.HelloMessage);
-            //System.Console.WriteLine();
-
-            ////A 3rd API method call for getting HelloWorld data (authorized by access token from initial request)
-            ////Demonstration of async requests
-            //Task<CompuMaster.Scopevisio.OpenApi.Model.Hello> t = HelloTask(OpenScopeClient);
-            //t.Wait();
-            //System.Console.WriteLine("Async hello world=" + t.Result.HelloMessage);
-            //System.Console.WriteLine();
-
-            //Show current context
-            CompuMaster.Scopevisio.OpenApi.Model.Records<CompuMaster.Scopevisio.OpenApi.Model.Organisation> OrganisationResult = OpenScopeClient.AdditionalApi.OrganisationJsonWithHttpInfo().Data;
-            System.Console.WriteLine("Organisationen={");
-            {
-                var sb = new StringBuilder();
-                foreach (CompuMaster.Scopevisio.OpenApi.Model.Organisation Org in OrganisationResult.Items)
-                {
-                    if (OrganisationResult.Items.IndexOf(Org) > 0)
-                        System.Console.WriteLine();
-                    sb.AppendLine("Org[" + (OrganisationResult.Items.IndexOf(Org) + 1) + "/" + OrganisationResult.Items.Count + "]");
-                    sb.AppendLine("  Org.ID=" + Org.Id);
-                    sb.AppendLine("  Org.Name=" + Org.Name);
-                    sb.AppendLine("  Org.TeamworkTenant.ID=" + Org.TeamworkTenantId);
-                    sb.AppendLine("  Org.TeamworkTenant.Name=" + Org.TeamworkTenantName);
-                }
-                System.Console.Write(Indent(sb.ToString()));
-            }
-            System.Console.WriteLine("}");
-            System.Console.WriteLine();
-
-            //Show current context
-            CompuMaster.Scopevisio.OpenApi.Model.AccountInfo ScopevisioAppContext = OpenScopeClient.AdditionalApi.GetApplicationContextWithHttpInfo().Data;
-            System.Console.WriteLine(ScopevisioAppContext.ToString());
-            System.Console.WriteLine();
-        }
 
         /// <summary>
         /// Ask user for field data and buffer them in local files
