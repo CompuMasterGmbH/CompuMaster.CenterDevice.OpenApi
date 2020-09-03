@@ -15,7 +15,6 @@
 		<copyright>2017-2020 CenterDevice GmbH, Bonn/Germany and CompuMaster GmbH, Emmelshausen/Germany</copyright>
 		<tags>CompuMaster CenterDevice IO Client</tags>
 		<dependencies>
-			<dependency id="CompuMaster.CenterDevice.Model" />
 			<dependency id="log4net" version="2.0.9" />
 			<dependency id="NewtonSoft.Json" version="12.0.3" />
 			<dependency id="Ninject" version="3.3.4" />

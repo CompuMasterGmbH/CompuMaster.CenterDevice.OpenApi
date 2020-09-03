@@ -3,9 +3,9 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 [assembly: AssemblyTitle("CompuMaster.CenterDevice.Rest")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("A client for CenterDevice REST API")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("CompuMaster GmbH")]
 [assembly: AssemblyProduct("CenterDevice.Rest")]
 [assembly: AssemblyCopyright("Copyright © 2017-2020 CenterDevice GmbH, Bonn/Germany and CompuMaster GmbH, Emmelshausen/Germany")]
 [assembly: AssemblyTrademark("")]

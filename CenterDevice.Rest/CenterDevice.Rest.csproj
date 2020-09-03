@@ -104,6 +104,14 @@
     <Compile Include="IO\IOClientBase.cs" />
     <Compile Include="IO\DirectoryInfo.cs" />
     <Compile Include="IO\FileInfo.cs" />
+    <Compile Include="Model\Collection\CollectionBaseData.cs" />
+    <Compile Include="Model\Document\DocumentSearchOrder.cs" />
+    <Compile Include="Model\Document\DocumentSearchResult.cs" />
+    <Compile Include="Model\Folder\IFolderBaseData.cs" />
+    <Compile Include="Model\Groups\GroupsFilter.cs" />
+    <Compile Include="Model\Registry\IconStatus.cs" />
+    <Compile Include="Model\Registry\RegistryStatus.cs" />
+    <Compile Include="Model\Tenant\TenantBaseData.cs" />
     <Compile Include="Rest\Clients\CenterDeviceStreamWrapper.cs" />
     <Compile Include="Rest\Clients\CenterDeviceClientBase.cs" />
     <Compile Include="Rest\Clients\CenterDeviceClient.cs" />
@@ -267,12 +275,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="_CreateNewNuGetPackage\DoNotModify\NuGet.exe" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CenterDevice.Model\CenterDevice.Model.csproj">
-      <Project>{c16f46d8-461b-4fe3-b8d6-26b3dbe6fa6c}</Project>
-      <Name>CenterDevice.Model</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

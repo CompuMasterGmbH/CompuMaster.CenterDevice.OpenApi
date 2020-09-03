@@ -55,10 +55,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CenterDevice.Model\CenterDevice.Model.csproj">
-      <Project>{c16f46d8-461b-4fe3-b8d6-26b3dbe6fa6c}</Project>
-      <Name>CenterDevice.Model</Name>
-    </ProjectReference>
     <ProjectReference Include="..\CenterDevice.Rest\CenterDevice.Rest.csproj">
       <Project>{6fdbda8a-ee11-46cb-b416-759f0800420b}</Project>
       <Name>CenterDevice.Rest</Name>
