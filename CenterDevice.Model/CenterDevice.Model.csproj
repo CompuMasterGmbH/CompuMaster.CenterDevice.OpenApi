@@ -92,13 +92,16 @@
     <Compile Include="Document\DocumentSearchResult.cs" />
     <Compile Include="Folder\IFolderBaseData.cs" />
     <Compile Include="Groups\GroupsFilter.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AssemblyInfo.cs" />
     <Compile Include="Registry\IconStatus.cs" />
     <Compile Include="Registry\RegistryStatus.cs" />
     <Compile Include="Tenant\TenantBaseData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -242,7 +242,7 @@
     <Compile Include="Rest\Exceptions\TooManyRequestsException.cs" />
     <Compile Include="Rest\Exceptions\UnauthorizedException.cs" />
     <Compile Include="Rest\Clients\IRestClientConfiguration.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AssemblyInfo.cs" />
     <Compile Include="Rest\ResponseHandler\BaseResponseHandler.cs" />
     <Compile Include="Rest\ResponseHandler\CreateFolderResponseHandler.cs" />
     <Compile Include="Rest\ResponseHandler\DataResponseHandler.cs" />
@@ -263,6 +263,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
