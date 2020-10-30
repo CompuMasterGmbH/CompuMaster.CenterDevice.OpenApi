@@ -39,6 +39,7 @@ namespace CenterDevice.Rest.Clients.Collections
                 searchRequest.AddQueryParameter(RestApiConstants.FIELDS, Utils.FieldUtils.GetFieldIncludes(typeof(Collection)));
             }
 
+            //following lines might fail with HttpStatusCode.BadRequest when the user is missing an assigned license
             var result = Execute<CollectionsResults>(GetOAuthInfo(userId), searchRequest);
             return UnwrapResponse(result, new StatusCodeResponseHandler<CollectionsResults>((new List<HttpStatusCode> { HttpStatusCode.OK, HttpStatusCode.NoContent })));
         }
