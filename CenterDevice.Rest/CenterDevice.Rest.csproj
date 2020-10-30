@@ -112,6 +112,9 @@
     <Compile Include="Model\Registry\IconStatus.cs" />
     <Compile Include="Model\Registry\RegistryStatus.cs" />
     <Compile Include="Model\Tenant\TenantBaseData.cs" />
+    <Compile Include="Rest\Clients\CenterDeviceConfiguration.cs" />
+    <Compile Include="Rest\Clients\CenterDeviceErrorHandler.cs" />
+    <Compile Include="Rest\Clients\CenterDeviceOAuthInfoProvider.cs" />
     <Compile Include="Rest\Clients\CenterDeviceStreamWrapper.cs" />
     <Compile Include="Rest\Clients\CenterDeviceClientBase.cs" />
     <Compile Include="Rest\Clients\CenterDeviceClient.cs" />
@@ -148,6 +151,8 @@
     <Compile Include="Rest\Clients\Link\UploadLink.cs" />
     <Compile Include="Rest\Clients\Link\UploadLinksRestClient.cs" />
     <Compile Include="Rest\Clients\Link\UploadLinkRestClient.cs" />
+    <Compile Include="Rest\Clients\RestClientConfiguration.cs" />
+    <Compile Include="Rest\Clients\OAuth\OAuthTokenEndpointConfiguration.cs" />
     <Compile Include="Rest\Clients\RestRequestFields.cs" />
     <Compile Include="Rest\Clients\Tenant\ITenantFeaturesRestClient.cs" />
     <Compile Include="Rest\Clients\Tenant\TenantFeatures.cs" />
