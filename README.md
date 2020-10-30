@@ -4,7 +4,12 @@
 
 * .NET 4.8 or later
 
-## Getting Started
+## Current development status
+PLEASE NOTE: 
+* the library already works for some 3rd party labels which indirectly involve the CenterDevice API.
+* as per today, the library DOES NOT work with the direct CenterDevice API since the authentification process is not available/implemented
+
+## TODO - NOT YET WORKING - Getting Started
 
 ### Console sample application for CenterDevice
 
