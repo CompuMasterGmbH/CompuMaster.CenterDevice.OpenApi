@@ -54,11 +54,5 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CenterDevice.Rest\CenterDevice.Rest.csproj">
-      <Project>{6fdbda8a-ee11-46cb-b416-759f0800420b}</Project>
-      <Name>CenterDevice.Rest</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
