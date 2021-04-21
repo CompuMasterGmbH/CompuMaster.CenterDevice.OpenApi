@@ -1,12 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;netcoreapp3.1;net5.0;net48;net45</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;netcoreapp3.1;net5.0;net48;net452</TargetFrameworks>
     <AssemblyName>CompuMaster.CenterDevice.Rest</AssemblyName>
     <Version>2021.04.21.100</Version>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/CompuMasterGmbH/CompuMaster.CenterDevice.IO</PackageProjectUrl>
-    <Copyright>Copyright © 2017-2020 CenterDevice GmbH, Bonn/Germany and CompuMaster GmbH, Emmelshausen/Germany</Copyright>
+    <Copyright>Copyright © 2017-2021 CenterDevice GmbH, Bonn/Germany and CompuMaster GmbH, Emmelshausen/Germany</Copyright>
     <Description>A client for CenterDevice REST API</Description>
     <Company>CompuMaster GmbH</Company>
     <Product>CenterDevice.Rest</Product>
@@ -45,10 +45,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-	<PackageReference Include="log4net" Version="2.0.9.0" />
+  <PackageReference Include="log4net" Version="2.0.9.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
     <PackageReference Include="Ninject" Version="3.3.4.0" />
-    <PackageReference Include="RestSharp" Version="106.11.7" />
+    <PackageReference Include="RestSharp" Version="106.11.4" />
   </ItemGroup>
   <ItemGroup Condition="'$(TargetFramework)' == 'net45'">
 	<PackageReference Include="RestSharp" Version="105.2.3" />
