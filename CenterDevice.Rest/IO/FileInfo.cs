@@ -291,6 +291,8 @@ namespace CenterDevice.IO
                     s.Dispose();
                 }
             }
+            if (this.ModificationDate.HasValue)
+                System.IO.File.SetLastWriteTimeUtc(targetFileName, this.ModificationDate.Value);
         }
 
         /// <summary>
