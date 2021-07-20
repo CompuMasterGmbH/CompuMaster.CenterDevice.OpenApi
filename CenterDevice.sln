@@ -21,7 +21,6 @@ Global
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{2FBE013B-7B2B-410B-9667-DFB060EBC82E}.CI_CD|Any CPU.ActiveCfg = Release|Any CPU
-		{2FBE013B-7B2B-410B-9667-DFB060EBC82E}.CI_CD|Any CPU.Build.0 = Release|Any CPU
 		{2FBE013B-7B2B-410B-9667-DFB060EBC82E}.CI_CD|x64.ActiveCfg = Release|Any CPU
 		{2FBE013B-7B2B-410B-9667-DFB060EBC82E}.CI_CD|x64.Build.0 = Release|Any CPU
 		{2FBE013B-7B2B-410B-9667-DFB060EBC82E}.CI_CD|x86.ActiveCfg = Release|Any CPU
