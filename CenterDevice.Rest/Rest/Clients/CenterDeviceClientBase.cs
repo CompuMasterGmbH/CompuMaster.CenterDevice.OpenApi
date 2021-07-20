@@ -8,6 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 
+#pragma warning disable CS1591 // Fehledes XML-Kommentar für öffentlich sichtbaren Typ oder Element
 namespace CenterDevice.Rest.Clients
 {
     /// <summary>
@@ -66,3 +67,4 @@ namespace CenterDevice.Rest.Clients
         public Rest.Clients.Tenant.TenantsRestClient Tenants => new Rest.Clients.Tenant.TenantsRestClient(oAuthInfoProvider, configuration, errorHandler, apiVersionPrefix);
     }
 }
+#pragma warning restore CS1591 // Fehledes XML-Kommentar für öffentlich sichtbaren Typ oder Element

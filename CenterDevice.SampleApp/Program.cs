@@ -3,6 +3,7 @@ using System.Text;
 using System.Threading.Tasks;
 using CenterDevice.IO;
 
+#pragma warning disable CS1591 // Fehledes XML-Kommentar für öffentlich sichtbaren Typ oder Element
 namespace CenterDevice.SampleApp
 {
     class Program
@@ -290,3 +291,4 @@ namespace CenterDevice.SampleApp
         }
     }
 }
+#pragma warning restore CS1591 // Fehledes XML-Kommentar für öffentlich sichtbaren Typ oder Element
