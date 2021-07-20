@@ -69,7 +69,7 @@ namespace CenterDevice.Rest.Clients.Collections
             ValidateResponse(result, new StatusCodeResponseHandler(HttpStatusCode.OK, HttpStatusCode.NoContent));
             if (string.IsNullOrWhiteSpace(result.Content))
             {
-                return System.Array.Empty<string>();
+                return new string[] { };
             }
             return JObject.Parse(result.Content)[RestApiConstants.COLLECTIONS]?.Select(i => i[RestApiConstants.ID]).Values<string>();
         }

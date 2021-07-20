@@ -261,7 +261,7 @@ namespace CenterDevice.IO
                 if (this.IsRootDirectory)
                 {
                     //root directory can't contain files, only directories (collections)
-                    this.getFiles = System.Array.Empty<FileInfo>();
+                    this.getFiles = new FileInfo[] { };
                 }
                 else if (this.restCollection != null)
                 {
