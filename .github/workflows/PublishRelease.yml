@@ -44,7 +44,7 @@ jobs:
               run: dotnet restore
 
             - name: Build
-              run: dotnet build --configuration=${{env.BUILD_CONFIGURATION}} --no-restore
+              run: dotnet build --configuration=${{env.BUILD_CONFIGURATION}} --no-restore ${{env.BUILD_PROJECT}}
 
             - name: Pack binaries
               run: |
