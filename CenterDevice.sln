@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29905.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CenterDevice.SampleApp", "CenterDevice.SampleApp\CenterDevice.SampleApp.csproj", "{2FBE013B-7B2B-410B-9667-DFB060EBC82E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CenterDevice.Rest", "CenterDevice.Rest\CenterDevice.Rest.csproj", "{6FDBDA8A-EE11-46CB-B416-759F0800420B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CenterDevice.Rest", "CenterDevice.Rest\CenterDevice.Rest.csproj", "{6FDBDA8A-EE11-46CB-B416-759F0800420B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
