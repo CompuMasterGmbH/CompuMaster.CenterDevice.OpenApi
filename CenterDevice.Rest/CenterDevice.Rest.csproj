@@ -20,7 +20,7 @@
     <ApplicationIcon>favicon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-	<OutputPath>bin\Release\</OutputPath>
+	<OutputPath>bin\Debug\</OutputPath>
 	<GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='CI_CD|AnyCPU'">
@@ -40,7 +40,7 @@
 	<NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
-    <DocumentationFile>bin\Release\CompuMaster.CenterDevice.Rest.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\CompuMaster.CenterDevice.Rest.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
     <DocumentationFile>bin\Release\CompuMaster.CenterDevice.Rest.xml</DocumentationFile>
